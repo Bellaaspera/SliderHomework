@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func redSliderAction() {
-        redSliderValue.text = "\(round (redSlider.value * 100) / 100)"
+        redSliderValue.text = String(format: "%.2f", redSlider.value)
 //        if blueSlider.value == 0 && greenSlider.value == 0 {
 //        mainView.backgroundColor = redSlider.minimumTrackTintColor?.withAlphaComponent(CGFloat(redSlider.value))
 //        } else {
@@ -41,7 +41,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func blueSliderAction() {
-        blueSliderValue.text = "\(round (blueSlider.value * 100) / 100)"
+        blueSliderValue.text = String(format: "%.2f", blueSlider.value)
 //        if redSlider.value == 0 && greenSlider.value == 0 {
 //        mainView.backgroundColor = blueSlider.minimumTrackTintColor?.withAlphaComponent(CGFloat(blueSlider.value))
 //        } else {
@@ -54,7 +54,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func greenSliderAction() {
-        greenSliderValue.text = "\(round (greenSlider.value * 100) / 100)"
+        greenSliderValue.text = String(format: "%.2f", greenSlider.value)
 //        if redSlider.value == 0 && greenSlider.value == 0 {
 //        mainView.backgroundColor = greenSlider.minimumTrackTintColor?.withAlphaComponent(CGFloat(greenSlider.value))
 //        } else {
