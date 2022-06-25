@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func redSliderAction() {
-        redSliderValue.text = "\(redSlider.value)"
+        redSliderValue.text = "\(round (redSlider.value * 100) / 100)"
         if blueSlider.value == 0 && greenSlider.value == 0 {
         mainView.backgroundColor = redSlider.minimumTrackTintColor?.withAlphaComponent(CGFloat(redSlider.value))
         } else {
@@ -41,7 +41,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func blueSliderAction() {
-        blueSliderValue.text = "\(blueSlider.value)"
+        blueSliderValue.text = "\(round (blueSlider.value * 100) / 100)"
         if redSlider.value == 0 && greenSlider.value == 0 {
         mainView.backgroundColor = blueSlider.minimumTrackTintColor?.withAlphaComponent(CGFloat(blueSlider.value))
         } else {
@@ -54,7 +54,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func greenSliderAction() {
-        greenSliderValue.text = "\(greenSlider.value)"
+        greenSliderValue.text = "\(round (greenSlider.value * 100) / 100)"
         if redSlider.value == 0 && greenSlider.value == 0 {
         mainView.backgroundColor = greenSlider.minimumTrackTintColor?.withAlphaComponent(CGFloat(greenSlider.value))
         } else {
@@ -70,12 +70,15 @@ class ViewController: UIViewController {
         redSlider.minimumValue = 0.0
         redSlider.maximumValue = 1.0
         redSlider.minimumTrackTintColor = .red
+        redSlider.value = 0
         blueSlider.minimumValue = 0.0
         blueSlider.maximumValue = 1.0
         blueSlider.minimumTrackTintColor = .blue
+        blueSlider.value = 0
         greenSlider.minimumValue = 0.0
         greenSlider.maximumValue = 1.0
         greenSlider.minimumTrackTintColor = .green
+        greenSlider.value = 0
     }
     
     private func setupLabel() {
