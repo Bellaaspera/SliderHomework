@@ -29,41 +29,41 @@ class ViewController: UIViewController {
     
     @IBAction func redSliderAction() {
         redSliderValue.text = "\(round (redSlider.value * 100) / 100)"
-        if blueSlider.value == 0 && greenSlider.value == 0 {
-        mainView.backgroundColor = redSlider.minimumTrackTintColor?.withAlphaComponent(CGFloat(redSlider.value))
-        } else {
+//        if blueSlider.value == 0 && greenSlider.value == 0 {
+//        mainView.backgroundColor = redSlider.minimumTrackTintColor?.withAlphaComponent(CGFloat(redSlider.value))
+//        } else {
             mainView.backgroundColor = UIColor(
                 red: CGFloat(redSlider.value),
                 green: CGFloat(greenSlider.value),
                 blue: CGFloat(blueSlider.value),
                 alpha: 1)
-        }
+//        }
     }
     
     @IBAction func blueSliderAction() {
         blueSliderValue.text = "\(round (blueSlider.value * 100) / 100)"
-        if redSlider.value == 0 && greenSlider.value == 0 {
-        mainView.backgroundColor = blueSlider.minimumTrackTintColor?.withAlphaComponent(CGFloat(blueSlider.value))
-        } else {
+//        if redSlider.value == 0 && greenSlider.value == 0 {
+//        mainView.backgroundColor = blueSlider.minimumTrackTintColor?.withAlphaComponent(CGFloat(blueSlider.value))
+//        } else {
             mainView.backgroundColor = UIColor(
                 red: CGFloat(redSlider.value),
                 green: CGFloat(greenSlider.value),
                 blue: CGFloat(blueSlider.value),
                 alpha: 1)
-        }
+//        }
     }
     
     @IBAction func greenSliderAction() {
         greenSliderValue.text = "\(round (greenSlider.value * 100) / 100)"
-        if redSlider.value == 0 && greenSlider.value == 0 {
-        mainView.backgroundColor = greenSlider.minimumTrackTintColor?.withAlphaComponent(CGFloat(greenSlider.value))
-        } else {
+//        if redSlider.value == 0 && greenSlider.value == 0 {
+//        mainView.backgroundColor = greenSlider.minimumTrackTintColor?.withAlphaComponent(CGFloat(greenSlider.value))
+//        } else {
             mainView.backgroundColor = UIColor(
                 red: CGFloat(redSlider.value),
                 green: CGFloat(greenSlider.value),
                 blue: CGFloat(blueSlider.value),
                 alpha: 1)
-        }
+//        }
     }
                                                                         
     private func setupSlider() {
