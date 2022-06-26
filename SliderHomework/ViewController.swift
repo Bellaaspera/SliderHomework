@@ -28,42 +28,30 @@ class ViewController: UIViewController {
     }
     
     @IBAction func redSliderAction() {
-        redSliderValue.text = String(format: "%.2f", redSlider.value)
-//        if blueSlider.value == 0 && greenSlider.value == 0 {
-//        mainView.backgroundColor = redSlider.minimumTrackTintColor?.withAlphaComponent(CGFloat(redSlider.value))
-//        } else {
-            mainView.backgroundColor = UIColor(
-                red: CGFloat(redSlider.value),
-                green: CGFloat(greenSlider.value),
-                blue: CGFloat(blueSlider.value),
-                alpha: 1)
-//        }
+        roundingSliderValueText(label: redSliderValue, slider: redSlider)
+        mainView.backgroundColor = UIColor(
+            red: CGFloat(redSlider.value),
+            green: CGFloat(greenSlider.value),
+            blue: CGFloat(blueSlider.value),
+            alpha: 1)
     }
     
     @IBAction func blueSliderAction() {
-        blueSliderValue.text = String(format: "%.2f", blueSlider.value)
-//        if redSlider.value == 0 && greenSlider.value == 0 {
-//        mainView.backgroundColor = blueSlider.minimumTrackTintColor?.withAlphaComponent(CGFloat(blueSlider.value))
-//        } else {
-            mainView.backgroundColor = UIColor(
-                red: CGFloat(redSlider.value),
-                green: CGFloat(greenSlider.value),
-                blue: CGFloat(blueSlider.value),
-                alpha: 1)
-//        }
+        roundingSliderValueText(label: blueSliderValue, slider: blueSlider)
+        mainView.backgroundColor = UIColor(
+            red: CGFloat(redSlider.value),
+            green: CGFloat(greenSlider.value),
+            blue: CGFloat(blueSlider.value),
+            alpha: 1)
     }
     
     @IBAction func greenSliderAction() {
-        greenSliderValue.text = String(format: "%.2f", greenSlider.value)
-//        if redSlider.value == 0 && greenSlider.value == 0 {
-//        mainView.backgroundColor = greenSlider.minimumTrackTintColor?.withAlphaComponent(CGFloat(greenSlider.value))
-//        } else {
-            mainView.backgroundColor = UIColor(
-                red: CGFloat(redSlider.value),
-                green: CGFloat(greenSlider.value),
-                blue: CGFloat(blueSlider.value),
-                alpha: 1)
-//        }
+        roundingSliderValueText(label: greenSliderValue, slider: greenSlider)
+        mainView.backgroundColor = UIColor(
+            red: CGFloat(redSlider.value),
+            green: CGFloat(greenSlider.value),
+            blue: CGFloat(blueSlider.value),
+            alpha: 1)
     }
                                                                         
     private func setupSlider() {
@@ -82,10 +70,12 @@ class ViewController: UIViewController {
     }
     
     private func setupLabel() {
-        redSliderValue.text = "0.0"
-        blueSliderValue.text = "0.0"
-        greenSliderValue.text = "0.0"
+        redSliderValue.text = "0.00"
+        blueSliderValue.text = "0.00"
+        greenSliderValue.text = "0.00"
+    }
+    
+    private func roundingSliderValueText(label: UILabel, slider: UISlider) {
+        label.text = String(format: "%.2f", slider.value)
     }
 }
-
-

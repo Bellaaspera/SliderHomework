@@ -71,27 +71,29 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="POS-yt-dfI">
-                                <rect key="frame" x="162" y="316" width="222" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="blueSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="22A-yi-IZP"/>
-                                </connections>
-                            </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="fzv-lq-Ou3">
-                                <rect key="frame" x="162" y="353" width="222" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="greenSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="I2v-h9-HgT"/>
-                                </connections>
-                            </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="wsi-1r-94W">
-                                <rect key="frame" x="162" y="279" width="222" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="redSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="IE5-VG-Jxd"/>
-                                </connections>
-                            </slider>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hwZ-qc-5ak">
+                                <rect key="frame" x="160" y="279" width="230" height="106"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="wsi-1r-94W">
+                                        <rect key="frame" x="-2" y="0.0" width="234" height="31"/>
+                                        <connections>
+                                            <action selector="redSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="IE5-VG-Jxd"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="POS-yt-dfI">
+                                        <rect key="frame" x="-2" y="38" width="234" height="31"/>
+                                        <connections>
+                                            <action selector="blueSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="22A-yi-IZP"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="fzv-lq-Ou3">
+                                        <rect key="frame" x="-2" y="76" width="234" height="31"/>
+                                        <connections>
+                                            <action selector="greenSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="I2v-h9-HgT"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.27696623003106158" green="0.25182389381280446" blue="0.592119983791076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -101,7 +103,12 @@
                             <constraint firstItem="ddI-9X-h7B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="CVj-YQ-omG"/>
                             <constraint firstItem="aXG-Pr-K0S" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="FBF-CL-kQ7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aXG-Pr-K0S" secondAttribute="trailing" constant="16" id="Kzp-lH-Uhe"/>
+                            <constraint firstItem="hwZ-qc-5ak" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.555556" id="Sqt-nV-uyj"/>
+                            <constraint firstItem="POS-yt-dfI" firstAttribute="height" secondItem="ddI-9X-h7B" secondAttribute="height" multiplier="0.319149" id="Zmh-Gg-oLa"/>
+                            <constraint firstItem="hwZ-qc-5ak" firstAttribute="top" secondItem="aXG-Pr-K0S" secondAttribute="bottom" constant="30" id="eM3-aK-qNf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hwZ-qc-5ak" secondAttribute="trailing" constant="24" id="mop-GE-RUS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ddI-9X-h7B" secondAttribute="bottom" constant="489" id="xEM-bN-oeJ"/>
+                            <constraint firstItem="aXG-Pr-K0S" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.184152" id="ziJ-yv-bFh"/>
                         </constraints>
                     </view>
                     <connections>
