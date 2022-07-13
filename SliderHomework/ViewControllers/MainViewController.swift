@@ -18,7 +18,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mainView.backgroundColor = .yellow
+        mainView.backgroundColor = .lightGray
 
     }
     
