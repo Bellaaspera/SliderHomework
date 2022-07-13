@@ -101,16 +101,25 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="46" height="34.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" smartInsertDeleteType="no"/>
+                                                <connections>
+                                                    <action selector="textFieldAction:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="LGK-ob-SAk"/>
+                                                </connections>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.00" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3ck-3q-zSk">
+                                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.00" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3ck-3q-zSk">
                                                 <rect key="frame" x="0.0" y="46.5" width="46" height="34.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" smartInsertDeleteType="no"/>
+                                                <connections>
+                                                    <action selector="textFieldAction:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Uva-XB-2jr"/>
+                                                </connections>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.00" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EWZ-87-abM">
+                                            <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.00" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EWZ-87-abM">
                                                 <rect key="frame" x="0.0" y="93" width="46" height="35"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" smartInsertDeleteType="no"/>
+                                                <connections>
+                                                    <action selector="textFieldAction:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="8KU-Ud-phO"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <constraints>
